@@ -14,5 +14,3 @@ Shreyas Kulkarni
 - You can find information about permission and copyright in **LICENSE** folder included in given link. This game is open source and we decided to expand the original code.
 - The game we've used is there with the same name Space Typer and the source code can be found in **(Grade 12 Midterm) - Space Typer** folder included in given link. 
 
-## Changes made in code
-- 
