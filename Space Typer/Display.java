@@ -13,19 +13,31 @@ import java.util.*;
  */
 public class Display extends Actor
 {
-    private String word = ""; // The word that is displayed on screen
-    private String currentChar = ""; // The character that will be evaluated, and added to the end of "word" if fits
-    private String forbiddenWord = ""; // Bug Prevention - To prevent a Obstacle being typed twice
-    private boolean isLetter = false; // A boolean that indicates whether the character is valid (Letters)
-    private boolean labelCreated = false; // One time label creation of score
-    private static int cleared = 0; // Amount of obstacles already cleared in this difficulty
-    private static int score = 0; // The score of the player
-    private int lastScore = 0; // Amount of score gained in the last Obstacle cleared
-    private SimpleTimer delay = new SimpleTimer();
-    private HashMap<String, Integer> letterValues = new HashMap<String, Integer>();
+    private String word;
+    private String currentChar;
+    private String forbiddenWord;
+    private boolean isLetter;
+    private boolean labelCreated;
+    private static int cleared;
+    private static int score;
+    private int lastScore;
+    private SimpleTimer delay;
+    private HashMap<String, Integer> letterValues;
     
     // Constructor
     public Display() {
+        // Initializing Values
+        word = ""; // The word that is displayed on screen
+        currentChar = ""; // The character that will be evaluated, and added to the end of "word" if fits
+        forbiddenWord = ""; // Bug Prevention - To prevent a Obstacle being typed twice
+        isLetter = false; // A boolean that indicates whether the character is valid (Letters)
+        labelCreated = false; // One time label creation of score
+        cleared = 0; // Amount of obstacles already cleared in this difficulty
+        score = 0; // The score of the player
+        lastScore = 0; // Amount of score gained in the last Obstacle cleared
+        delay = new SimpleTimer();
+        letterValues = new HashMap<String, Integer>();
+        
         // Reset related variables
         cleared = 0;
         score = 0;
