@@ -37,7 +37,7 @@ public class MyWorld extends World
         super(800, 500, 1);
         
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle1.class, Obstacle2.class);
         
         // Starting the music only once
         if (!musicStarted) {
@@ -63,7 +63,7 @@ public class MyWorld extends World
         addObject(currentDifficulty, 700, 470);
         
         // Fill the Queue with a specified amount of Obstacle
-        obstacles = refreshQueue(obstacles, numOfObstacles);
+        obstacles = refreshQueue(obstacles, numOfObstacles, true);
     }
     
     public void act() {
@@ -71,33 +71,33 @@ public class MyWorld extends World
         if (delay.millisElapsed() > spawnTime && !obstacles.isEmpty()) {
             if (difficulty < 5) {
                 // Randomly spawns Obstacle along a range on the Y-Axis
-                addObject(obstacles.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
+                addObject((greenfoot.Actor)obstacles.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
             }
             else {                
                 switch (pattern) {
                     // Spawns in a fixed pattern to prevent Obstacle stacking from high spawn rates
                     case 1:
-                        addObject(obstacles.dequeue(), 800, 40);
+                        addObject((greenfoot.Actor)obstacles.dequeue(), 800, 40);
                         pattern = 2;
                         break;
                     
                     case 2:
-                        addObject(obstacles.dequeue(), 800, 100);
+                        addObject((greenfoot.Actor)obstacles.dequeue(), 800, 100);
                         pattern = 3;
                         break;
                         
                     case 3:
-                        addObject(obstacles.dequeue(), 800, 160);
+                        addObject((greenfoot.Actor)obstacles.dequeue(), 800, 160);
                         pattern = 4;
                         break;
                         
                     case 4:
-                        addObject(obstacles.dequeue(), 800, 220);
+                        addObject((greenfoot.Actor)obstacles.dequeue(), 800, 220);
                         pattern = 5;
                         break;
                         
                     case 5:
-                        addObject(obstacles.dequeue(), 800, 280);
+                        addObject((greenfoot.Actor)obstacles.dequeue(), 800, 280);
                         pattern = 1;
                         break;
                 }
@@ -154,7 +154,7 @@ public class MyWorld extends World
                     this.setBackground(new GreenfootImage("background5.png"));
                     break;
             }
-            obstacles = refreshQueue(obstacles, numOfObstacles);
+            obstacles = refreshQueue(obstacles, numOfObstacles, true);
         }
     }
     
@@ -165,13 +165,20 @@ public class MyWorld extends World
     }
     
     // Method to refill Queue with a specific amount of Obstacle
-    public Queue<Obstacle> refreshQueue(Queue<Obstacle> q, int amount) {
+    public Queue<Obstacle> refreshQueue(Queue<Obstacle> q, int amount, boolean difficultyUpgrade) {
         while (!q.isEmpty()) {
             q.dequeue();
         }
         
-        while (q.size() < amount) {
-            q.enqueue(new Obstacle(minLetters, maxLetters)); 
+        if(!difficultyUpgrade){
+            while (q.size() < amount) {
+                q.enqueue(new Obstacle1(minLetters, maxLetters)); 
+            }
+        }
+        else{
+            while (q.size() < amount) {
+                q.enqueue(new Obstacle2(minLetters, maxLetters)); 
+            }
         }
         return q;
     }

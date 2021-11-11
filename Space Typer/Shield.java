@@ -31,7 +31,15 @@ public class Shield extends Actor
         shieldBreak.play();
         shields--;
         
-        for (Obstacle o : world.getObjects(Obstacle.class)) {
+        for (Obstacle1 o : world.getObjects(Obstacle1.class)) {
+            o.removeLabel();
+            world.removeObject(o);
+            
+            // Bug Prevention - To make sure difficulty still progresses properly
+            Display.setCleared(Display.getCleared() + 1);
+        }
+        
+        for (Obstacle2 o : world.getObjects(Obstacle2.class)) {
             o.removeLabel();
             world.removeObject(o);
             
