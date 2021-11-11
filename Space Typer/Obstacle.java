@@ -2,22 +2,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * It will constantly move to the left until it hits the Shield or thPlanet.
+ * It will constantly move to the left until it hits the Shield or the Planet.
  * 
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
 public class Obstacle extends Actor
 {   
-    private int explosionProgress = 0; // The image the current explosion effect is on
-    private boolean completed = false; // Whether the Label on top of Obstacle has been declared
-    private boolean explode = false; // To determine if the Obstacle should explode
-    private String value = MyWorld.getWords().get(Greenfoot.getRandomNumber(MyWorld.getWords().size())); // The word it will display
-    private GreenfootImage[] explosions = new GreenfootImage[5]; // Images of the explosion sequence
-    private SimpleTimer delay = new SimpleTimer(); // A delay between each of the explosion animation
+    private int explosionProgress; 
+    private boolean completed; 
+    private boolean explode;
+    private String value;
+    private GreenfootImage[] explosions;
+    private SimpleTimer delay;
     
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
     public Obstacle(int min, int max) {
+        explosionProgress = 0; // The image the current explosion effect is on
+        completed = false; // Whether the Label on top of Obstacle has been declared
+        explode = false; // To determine if the Obstacle should explode
+        value = MyWorld.getWords().get(Greenfoot.getRandomNumber(MyWorld.getWords().size())); // The word it will display
+        explosions = new GreenfootImage[5]; // Images of the explosion sequence
+        delay = new SimpleTimer(); // A delay between each of the explosion animation
+        
         while (value.length() > max || value.length() < min) { 
             value = MyWorld.getWords().get(Greenfoot.getRandomNumber(MyWorld.getWords().size()));
         }
