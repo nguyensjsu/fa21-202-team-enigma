@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Obstacle
+comment0.text=\r\n\ It\ will\ constantly\ move\ to\ the\ left\ until\ it\ hits\ the\ Shield\ or\ the\ Planet.\r\n\ \r\n\ @author\ (Ricky)\ \r\n\ @version\ (April\ 11,\ 2019)\r\n
+comment1.params=min\ max
+comment1.target=Obstacle(int,\ int)
+numComments=2

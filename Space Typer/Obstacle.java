@@ -7,7 +7,7 @@ import java.util.*;
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
-public class Obstacle1 extends Meteor
+public class Obstacle extends Meteor
 {
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
     public Obstacle(int min, int max) {
