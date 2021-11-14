@@ -1,1 +1,7 @@
+The key to learning is feedback. It is nearly impossible to learn anything without it. - Steven D. Levitt
 
+# Week 1
+
+The team members connected for the first time. Each team member was exploring on the project topic to work on. We were juggling between creating a game or an application. But we had already learned to apply patterns in an application through starbucks so based on the teams feedback about it we decided to create a game. Everyone searched for different games in Unity, Greenfoot, Java and Javascript. We really liked a game in Javascript. But after getting the feedback from team on it, we decided that  Javascript is not the best choice to learn the pattern implementation. Therefore, we moved forward with a game developed in Greenfoot which the team members found pretty interesting. We decided to ask our friends which can be users of the game to have a constructive feedback on the game and the additional functionalities.
+
+Now, we had to analayse the existing game and decide which team member should work on which modules. As I was promoting the value : Feedback, I decided to analyse the game, and came up with additional functionalities which could enhance the game and also provided feedback with the design patterns which can be implemented while adding those functionalities. After explaining around 7 functionalities to team members, based on the teams' and users' feedback we decided to implement 5 of them.
