@@ -158,16 +158,19 @@ public class Display extends Actor
     
     // Method to check if any of the Obstacle matches the word typed
     public void checkWord(String input, Ship ship) {
-        List<Obstacle> obstacles = getWorld().getObjects(Obstacle.class); // A List of Obstacle in world currently
+        List<Meteor> meteors = getWorld().getObjects(Meteor.class); // A List of Obstacle in world currently
         MyWorld world = (MyWorld) getWorld();  // Get world reference
         
-        for (Obstacle o : obstacles) {
-            
+        for (Meteor o : meteors) {
+            boolean isBoosterMeteor = false;
             // Bug Prevention - To make sure a word that has a Bullet aimed at it can not be typed again
             if (o.getValue().equals(input) && !forbiddenWord.equals(input)) {
                 cleared++;
                 forbiddenWord = input;
-                lastScore = calculateScore(input, letterValues);
+                if(o.getClass().equals(BoosterMeteor.class)) {
+                    isBoosterMeteor = true;
+                }
+                lastScore = calculateScore(isBoosterMeteor, input, letterValues);
                 score += lastScore;
                 
                 // Spawn a Bullet and move the Ship to the Y-Pos of the correct Obstacle 
@@ -183,13 +186,17 @@ public class Display extends Actor
     }
     
     // Method used to calculate how much a word is worth
-    public int calculateScore(String word, HashMap<String, Integer> values) {
+    public int calculateScore(Boolean isBoosterMeteor, String word, HashMap<String, Integer> values) {
+
         int total = 0; // Total value of the word
         
         for (int i = 0; i < word.length(); i++) {
             total += values.get(word.substring(i, i + 1));
         }
-        
+        if(isBoosterMeteor) {
+            MyWorld world = (MyWorld) getWorld();
+            total = world.getObjects(BoosterMeteor.class).get(0).multiplyScore(total);
+        }
         return total;
     }
     
