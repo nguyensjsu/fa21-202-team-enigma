@@ -15,6 +15,9 @@ public class Meteor extends Actor
     private GreenfootImage[] explosions;
     private SimpleTimer delay;
 
+    public void setValue(String value) {
+        this.value = value;
+    }
     public Meteor(int min, int max) {
         explosionProgress = 0; // The image the current explosion effect is on
         completed = false; // Whether the Label on top of Obstacle has been declared

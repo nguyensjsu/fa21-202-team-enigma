@@ -24,8 +24,6 @@ public class MyWorld extends World {
     // Gameplay variables
 //    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
     private Queue<Meteor> meteors = new Queue<>();
-    //private Queue<Obstacle> obstaclesList = new Queue<>();
-    //private Queue<BoosterMeteor> boosterMeteorsList = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
     private int numOfObstacles = 7; // The number of Obstacle queued for the next difficulty
     private int spawnTime = 3000; // Delay in Milliseconds between each Obstacle Spawn
@@ -39,7 +37,7 @@ public class MyWorld extends World {
         super(800, 500, 1);
 
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Meteor.class);
 
         // Starting the music only once
         if (!musicStarted) {
@@ -65,7 +63,7 @@ public class MyWorld extends World {
         addObject(currentDifficulty, 700, 470);
 
         // Fill the Queue with a specified amount of Obstacle
-        meteors = refreshQueue(meteors, numOfObstacles);
+        meteors = refreshQueue(meteors, numOfObstacles, false);
     }
 
     public void act() {
@@ -155,7 +153,7 @@ public class MyWorld extends World {
                     this.setBackground(new GreenfootImage("background5.png"));
                     break;
             }
-            meteors = refreshQueue(meteors, numOfObstacles);
+            meteors = refreshQueue(meteors, numOfObstacles, false);
         }
     }
 
@@ -166,17 +164,24 @@ public class MyWorld extends World {
     }
 
     // Method to refill Queue with a specific amount of Obstacle
-    public Queue<Meteor> refreshQueue(Queue<Meteor> q, int amount) {
+    public Queue<Meteor> refreshQueue(Queue<Meteor> q, int amount, boolean difficultyUpgrade) {
         while (!q.isEmpty()) {
             q.dequeue();
         }
-
-        while (q.size() < amount) {
-            if (q.size() % 4 == 0 && !q.isEmpty())
-                q.enqueue(new BoosterMeteor(minLetters, maxLetters));
-            else
-                q.enqueue(new Obstacle(minLetters, maxLetters));
+        if(!difficultyUpgrade) {
+            while (q.size() < amount) {
+                if (q.size() % 4 == 0 && !q.isEmpty())
+                    q.enqueue(new BoosterMeteor(minLetters, maxLetters));
+                else
+                    q.enqueue(new Obstacle1(minLetters, maxLetters));
+            }
         }
+        else {
+            while (q.size() < amount) {
+                q.enqueue(new Obstacle2(minLetters, maxLetters));
+            }
+        }
+        
 
         return q;
     }

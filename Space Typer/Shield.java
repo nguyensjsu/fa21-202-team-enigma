@@ -31,7 +31,7 @@ public class Shield extends Actor
         shieldBreak.play();
         shields--;
         
-        for (Obstacle o : world.getObjects(Obstacle.class)) {
+        for (Meteor o : world.getObjects(Meteor.class)) {
             o.removeLabel();
             world.removeObject(o);
             

@@ -13,7 +13,7 @@ public class Planet extends Actor
     public void act() 
     {
         // Gameover if a Obstacle touches it, and passes the player's score to the EndScreen
-        if (isTouching(Obstacle.class)) {
+        if (isTouching(Meteor.class)) {
             explode.play();
             EndScreen gameover = new EndScreen(Display.getScore());
             Greenfoot.setWorld(gameover);
