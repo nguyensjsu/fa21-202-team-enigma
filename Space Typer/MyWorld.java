@@ -63,7 +63,7 @@ public class MyWorld extends World {
         addObject(currentDifficulty, 700, 470);
 
         // Fill the Queue with a specified amount of Obstacle
-        meteors = refreshQueue(meteors, numOfObstacles, false);
+        meteors = refreshQueue(meteors, numOfObstacles, true);
     }
 
     public void act() {
@@ -153,7 +153,7 @@ public class MyWorld extends World {
                     this.setBackground(new GreenfootImage("background5.png"));
                     break;
             }
-            meteors = refreshQueue(meteors, numOfObstacles, false);
+            meteors = refreshQueue(meteors, numOfObstacles, true);
         }
     }
 
