@@ -158,10 +158,14 @@ public class Display extends Actor
     
     // Method to check if any of the Obstacle matches the word typed
     public void checkWord(String input, Ship ship) {
-        List<Meteor> meteors = getWorld().getObjects(Meteor.class); // A List of Obstacle in world currently
+        List<IMeteor> meteors = getWorld().getObjects(IMeteor.class); // A List of Obstacle in world currently
+        List<Obstacle> obstacles = getWorld().getObjects(Obstacle.class);
+        List<BoosterMeteor> boosterMeteors = getWorld().getObjects(BoosterMeteor.class);
+        meteors.addAll(obstacles);
+        meteors.addAll(boosterMeteors);
         MyWorld world = (MyWorld) getWorld();  // Get world reference
         
-        for (Meteor o : meteors) {
+        for (IMeteor o : meteors) {
             boolean isBoosterMeteor = false;
             // Bug Prevention - To make sure a word that has a Bullet aimed at it can not be typed again
             if (o.getValue().equals(input) && !forbiddenWord.equals(input)) {

@@ -23,7 +23,7 @@ public class MyWorld extends World {
 
     // Gameplay variables
 //    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
-    private Queue<Meteor> meteors = new Queue<>();
+    private Queue<IMeteor> meteors = new Queue<>();
     //private Queue<Obstacle> obstaclesList = new Queue<>();
     //private Queue<BoosterMeteor> boosterMeteorsList = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
@@ -73,32 +73,32 @@ public class MyWorld extends World {
         if (delay.millisElapsed() > spawnTime && !meteors.isEmpty()) {
             if (difficulty < 5) {
                 // Randomly spawns Obstacle along a range on the Y-Axis
-                addObject(meteors.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
+                addObject((greenfoot.Actor)meteors.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
             } else {
                 switch (pattern) {
                     // Spawns in a fixed pattern to prevent Obstacle stacking from high spawn rates
                     case 1:
-                        addObject(meteors.dequeue(), 800, 40);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 40);
                         pattern = 2;
                         break;
 
                     case 2:
-                        addObject(meteors.dequeue(), 800, 100);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 100);
                         pattern = 3;
                         break;
 
                     case 3:
-                        addObject(meteors.dequeue(), 800, 160);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 160);
                         pattern = 4;
                         break;
 
                     case 4:
-                        addObject(meteors.dequeue(), 800, 220);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 220);
                         pattern = 5;
                         break;
 
                     case 5:
-                        addObject(meteors.dequeue(), 800, 280);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 280);
                         pattern = 1;
                         break;
                 }
@@ -166,14 +166,14 @@ public class MyWorld extends World {
     }
 
     // Method to refill Queue with a specific amount of Obstacle
-    public Queue<Meteor> refreshQueue(Queue<Meteor> q, int amount) {
+    public Queue<IMeteor> refreshQueue(Queue<IMeteor> q, int amount) {
         while (!q.isEmpty()) {
             q.dequeue();
         }
 
         while (q.size() < amount) {
             if (q.size() % 4 == 0 && !q.isEmpty())
-                q.enqueue(new BoosterMeteor(minLetters, maxLetters));
+                q.enqueue(new BoosterMeteor(new Obstacle(minLetters, maxLetters)));
             else
                 q.enqueue(new Obstacle(minLetters, maxLetters));
         }

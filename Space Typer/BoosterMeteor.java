@@ -9,18 +9,17 @@ import java.util.HashMap;
  * @version (a version number or a date)
  */
 public class BoosterMeteor extends MeteorDecorator
-{    
+{
+    
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
-    public BoosterMeteor(int min, int max) {
-        super(min, max);
+    public BoosterMeteor(Obstacle obstacle) {
+        super(obstacle);
         GreenfootImage image = getImage();
         image.scale(100, 100);
     }
 
-    @Override
+    //@Override
     public int multiplyScore(int score) {
         return score*2;
     }
-
-
 }

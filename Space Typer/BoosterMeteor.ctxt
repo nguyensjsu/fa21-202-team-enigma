@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=BoosterMeteor
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Booster\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=min\ max
-comment1.target=BoosterMeteor(int,\ int)
+comment0.text=\n\ Write\ a\ description\ of\ class\ Booster\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=obstacle
+comment1.target=BoosterMeteor(Obstacle)
 comment2.params=score
 comment2.target=int\ multiplyScore(int)
 numComments=3
