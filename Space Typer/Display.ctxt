@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Display
-comment0.text=\n\ This\ is\ where\ the\ word\ will\ be\ typed,\ displayed,\ and\ evaluated.\ It\ contains\ a\ HashMap\ with\ letters\n\ and\ their\ respective\ values.\ The\ scoring\ of\ a\ word\ depends\ on\ the\ total\ letter\ values\ of\ each\n\ individual\ letter\ in\ a\ word.\ When\ the\ word\ typed\ matches\ a\ Obstacle,\ a\ Bullet\ will\ be\ spawned\ to\ \n\ destroy\ it,\ the\ Ship\ will\ move\ to\ the\ Obstacle,\ and\ score\ will\ be\ calculated\ and\ added.\n\ \n\ @author\ (Ricky,\ Jason,\ Charlie)\ \n\ @date\ (April\ 11,\ 2019)\n
+comment0.text=\r\n\ This\ is\ where\ the\ word\ will\ be\ typed,\ displayed,\ and\ evaluated.\ It\ contains\ a\ HashMap\ with\ letters\r\n\ and\ their\ respective\ values.\ The\ scoring\ of\ a\ word\ depends\ on\ the\ total\ letter\ values\ of\ each\r\n\ individual\ letter\ in\ a\ word.\ When\ the\ word\ typed\ matches\ a\ Obstacle,\ a\ Bullet\ will\ be\ spawned\ to\ \r\n\ destroy\ it,\ the\ Ship\ will\ move\ to\ the\ Obstacle,\ and\ score\ will\ be\ calculated\ and\ added.\r\n\ \r\n\ @author\ (Ricky,\ Jason,\ Charlie)\ \r\n\ @date\ (April\ 11,\ 2019)\r\n
 comment1.params=
 comment1.target=Display()
 comment2.params=

@@ -8,12 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Meteor extends Actor implements IMeteor
 {
-    private int explosionProgress;
-    private boolean completed;
-    private boolean explode;
-    private String value;
-    private GreenfootImage[] explosions;
-    private SimpleTimer delay;
+    int explosionProgress;
+    boolean completed;
+    boolean explode;
+    String value;
+    GreenfootImage[] explosions;
+    SimpleTimer delay;
 
     public Meteor(int min, int max) {
         explosionProgress = 0; // The image the current explosion effect is on

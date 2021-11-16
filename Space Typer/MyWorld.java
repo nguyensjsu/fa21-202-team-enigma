@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 import java.util.*;
+import java.util.Random;  
 
 /**
  * The world where the game is started in. It has many field variables that dictate how difficult the
@@ -31,13 +31,14 @@ public class MyWorld extends World {
     private int maxLetters = 7; // The longest length a word can be
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
-
+    private int reverseWordFreq = 4;
+    
     // Constructor
     public MyWorld() {
         super(800, 500, 1);
 
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle1.class, Obstacle2.class);
 
         // Starting the music only once
         if (!musicStarted) {
@@ -126,6 +127,7 @@ public class MyWorld extends World {
                     minLetters = 4;
                     maxLetters = 8;
                     this.setBackground(new GreenfootImage("background2.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 3:
@@ -134,6 +136,7 @@ public class MyWorld extends World {
                     minLetters = 5;
                     maxLetters = 9;
                     this.setBackground(new GreenfootImage("background3.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 4:
@@ -142,6 +145,7 @@ public class MyWorld extends World {
                     minLetters = 7;
                     maxLetters = 11;
                     this.setBackground(new GreenfootImage("background4.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 5:
@@ -172,8 +176,12 @@ public class MyWorld extends World {
         while (q.size() < amount) {
             if (q.size() % 4 == 0 && !q.isEmpty())
                 q.enqueue(new BoosterMeteor(minLetters, maxLetters));
-            else
-                q.enqueue(new Obstacle(minLetters, maxLetters));
+            else{
+                if(new Random().nextInt(reverseWordFreq) == 0)
+                    q.enqueue(new Obstacle2(minLetters, maxLetters));
+                else
+                    q.enqueue(new Obstacle1(minLetters, maxLetters));
+            }   
         }
 
         return q;

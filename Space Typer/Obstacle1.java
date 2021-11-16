@@ -7,10 +7,10 @@ import java.util.*;
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
-public class Obstacle extends Meteor
+public class Obstacle1 extends Meteor
 {
 
-    public Obstacle(int min, int max) {
+    public Obstacle1(int min, int max) {
         super(min, max);
 
     }
