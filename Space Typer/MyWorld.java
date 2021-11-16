@@ -33,10 +33,15 @@ public class MyWorld extends World
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
 =======
 =======
 >>>>>>> Stashed changes
+    private int reverseWordsFrequency = 4;
+
+>>>>>>> Stashed changes
+=======
     private int reverseWordsFrequency = 4;
 
 >>>>>>> Stashed changes
@@ -49,8 +54,11 @@ public class MyWorld extends World
         setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle1.class, Obstacle2.class);
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -213,6 +221,9 @@ public class MyWorld extends World
             }
                 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -10,6 +10,8 @@ import java.util.*;
 <<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Space Typer/Obstacle2.java
 <<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Space Typer/Obstacle2.java
+<<<<<<< Updated upstream
 public class Obstacle2 extends Actor implements Obstacle
 {   
     private int explosionProgress; 
@@ -22,6 +24,8 @@ public class Obstacle2 extends Actor implements Obstacle
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
     public Obstacle2(int min, int max) {
 ========
+========
+>>>>>>>> Stashed changes:Space Typer/Meteor.java
 public class Meteor extends Actor implements IMeteor
 {
     int explosionProgress;
@@ -110,6 +114,8 @@ public class Meteor extends Actor implements IMeteor
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 public class Obstacle2 extends Meteor
 {
     String originalWord;
@@ -140,6 +146,9 @@ public class Obstacle2 extends Meteor
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

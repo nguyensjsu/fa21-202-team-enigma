@@ -13,11 +13,15 @@ comment5.params=
 comment5.target=void\ explode()
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 comment6.params=
 comment6.target=int\ getXX()
 comment7.params=
 comment7.target=int\ getYY()
 numComments=8
+=======
+numComments=6
+>>>>>>> Stashed changes
 =======
 numComments=6
 >>>>>>> Stashed changes
