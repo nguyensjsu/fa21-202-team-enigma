@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.util.Random; 
 
 /**
  * The world where the game is started in. It has many field variables that dictate how difficult the 
@@ -30,7 +31,12 @@ public class MyWorld extends World
     private int maxLetters = 7; // The longest length a word can be
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
+<<<<<<< Updated upstream
     
+=======
+    private int reverseWordsFrequency = 4;
+
+>>>>>>> Stashed changes
     // Constructor
     public MyWorld()
     {    
@@ -38,7 +44,11 @@ public class MyWorld extends World
         
         // Order of Actors due to the need for certain Actors to be on top of others
         setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle1.class, Obstacle2.class);
+<<<<<<< Updated upstream
         
+=======
+
+>>>>>>> Stashed changes
         // Starting the music only once
         if (!musicStarted) {
             backgroundMusic.setVolume(30);
@@ -127,6 +137,7 @@ public class MyWorld extends World
                     minLetters = 4;
                     maxLetters = 8;
                     this.setBackground(new GreenfootImage("background2.png"));
+                    reverseWordsFrequency--;
                     break;
                     
                 case 3:
@@ -135,6 +146,7 @@ public class MyWorld extends World
                     minLetters = 5;
                     maxLetters = 9;
                     this.setBackground(new GreenfootImage("background3.png"));
+                    reverseWordsFrequency--;
                     break;
                     
                 case 4:
@@ -143,6 +155,7 @@ public class MyWorld extends World
                     minLetters = 7;
                     maxLetters = 11;
                     this.setBackground(new GreenfootImage("background4.png"));
+                    reverseWordsFrequency--;
                     break;
                     
                 case 5:
@@ -169,6 +182,7 @@ public class MyWorld extends World
         while (!q.isEmpty()) {
             q.dequeue();
         }
+<<<<<<< Updated upstream
         
         if(!difficultyUpgrade){
             while (q.size() < amount) {
@@ -179,6 +193,20 @@ public class MyWorld extends World
             while (q.size() < amount) {
                 q.enqueue(new Obstacle2(minLetters, maxLetters)); 
             }
+=======
+
+        while (q.size() < amount) {
+            if (q.size() % 4 == 0 && !q.isEmpty())
+                q.enqueue(new BoosterMeteor(minLetters, maxLetters));
+            else{
+                // One is 'reverseWordsFrequency' is a reverseWord Meteor
+                if(new Random().nextInt(reverseWordsFrequency) == 0)
+                    q.enqueue(new Obstacle2(minLetters, maxLetters));
+                else
+                    q.enqueue(new Obstacle1(minLetters, maxLetters));
+            }
+                
+>>>>>>> Stashed changes
         }
         return q;
     }

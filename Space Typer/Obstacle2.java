@@ -7,6 +7,7 @@ import java.util.*;
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
+<<<<<<< Updated upstream
 public class Obstacle2 extends Actor implements Obstacle
 {   
     private int explosionProgress; 
@@ -92,4 +93,35 @@ public class Obstacle2 extends Actor implements Obstacle
     public int getYY(){
         return getY();
     }
+=======
+public class Obstacle2 extends Meteor
+{
+    String originalWord;
+    public Obstacle2(int min, int max) {
+        super(min, max);
+        originalWord = value;
+        value = new StringBuffer(originalWord).reverse().toString();
+    }
+
+    public void act()
+    {
+        super.act();
+    }
+
+    // Remove the label on top of this Obstacle
+    public void removeLabel() {
+        super.removeLabel();
+    }
+
+    // Returns the word that should be typed on this Obstacle
+    public String getValue() {
+        return originalWord;
+    }
+
+    // Initiate the explosion sequence
+    public void explode() {
+        super.explode();
+    }
+
+>>>>>>> Stashed changes
 }

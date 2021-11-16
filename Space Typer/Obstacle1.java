@@ -1,3 +1,15 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:Space Typer/Obstacle.java
+public interface Obstacle {
+    void act();
+    void removeLabel();
+    String getValue();
+    void explode();
+    int getX();
+    int getY();
+========
+>>>>>>> Stashed changes
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
@@ -7,6 +19,8 @@ import java.util.*;
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Space Typer/Obstacle1.java
 public class Obstacle1 extends Actor implements Obstacle
 {   
     private int explosionProgress; 
@@ -18,6 +32,18 @@ public class Obstacle1 extends Actor implements Obstacle
     
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
     public Obstacle1(int min, int max) {
+========
+public class Meteor extends Actor implements IMeteor
+{
+    int explosionProgress;
+    boolean completed;
+    boolean explode;
+    String value;
+    GreenfootImage[] explosions;
+    SimpleTimer delay;
+
+    public Meteor(int min, int max) {
+>>>>>>>> Stashed changes:Space Typer/Meteor.java
         explosionProgress = 0; // The image the current explosion effect is on
         completed = false; // Whether the Label on top of Obstacle has been declared
         explode = false; // To determine if the Obstacle should explode
@@ -92,4 +118,33 @@ public class Obstacle1 extends Actor implements Obstacle
     public int getY(){
         return getY();
     }
+=======
+public class Obstacle1 extends Meteor
+{
+
+    public Obstacle1(int min, int max) {
+        super(min, max);
+    }
+
+    public void act(){
+        super.act();
+    }
+
+    // Remove the label on top of this Obstacle
+    public void removeLabel() {
+        super.removeLabel();
+    }
+
+    // Returns the word that should be typed on this Obstacle
+    public String getValue() {
+        return super.getValue();
+    }
+
+    // Initiate the explosion sequence
+    public void explode() {
+        super.explode();
+    }
+
+>>>>>>>> Stashed changes:Space Typer/Obstacle1.java
+>>>>>>> Stashed changes
 }
