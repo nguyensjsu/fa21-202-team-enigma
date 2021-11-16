@@ -1,13 +1,8 @@
 #BlueJ class context
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:Space Typer/Obstacle1.ctxt
->>>>>>> Stashed changes
 comment0.target=Obstacle1
 comment0.text=\r\n\ It\ will\ constantly\ move\ to\ the\ left\ until\ it\ hits\ the\ Shield\ or\ the\ Planet.\r\n\ \r\n\ @author\ (Ricky)\ \r\n\ @version\ (April\ 11,\ 2019)\r\n
 comment1.params=min\ max
 comment1.target=Obstacle1(int,\ int)
-<<<<<<< Updated upstream
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
@@ -16,26 +11,4 @@ comment4.params=
 comment4.target=java.lang.String\ getValue()
 comment5.params=
 comment5.target=void\ explode()
-comment6.params=
-comment6.target=int\ getX()
-comment7.params=
-comment7.target=int\ getY()
-numComments=8
-=======
-========
-comment0.target=Obstacle
-comment1.params=
-comment1.target=void\ act()
->>>>>>>> Stashed changes:Space Typer/Obstacle.ctxt
-comment2.params=
-comment2.target=void\ removeLabel()
-comment3.params=
-comment3.target=java.lang.String\ getValue()
-comment4.params=
-comment4.target=void\ explode()
-comment5.params=
-comment5.target=int\ getX()
-comment6.params=
-comment6.target=int\ getY()
-numComments=7
->>>>>>> Stashed changes
+numComments=6

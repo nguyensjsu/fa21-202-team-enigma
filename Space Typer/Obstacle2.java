@@ -8,6 +8,8 @@ import java.util.*;
  * @version (April 11, 2019)
  */
 <<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Space Typer/Obstacle2.java
+<<<<<<< Updated upstream
 public class Obstacle2 extends Actor implements Obstacle
 {   
     private int explosionProgress; 
@@ -19,6 +21,18 @@ public class Obstacle2 extends Actor implements Obstacle
     
     // Constructor (Makes sure the word length is between minimum and maximum for smoother difficulty curve)
     public Obstacle2(int min, int max) {
+========
+public class Meteor extends Actor implements IMeteor
+{
+    int explosionProgress;
+    boolean completed;
+    boolean explode;
+    String value;
+    GreenfootImage[] explosions;
+    SimpleTimer delay;
+
+    public Meteor(int min, int max) {
+>>>>>>>> Stashed changes:Space Typer/Meteor.java
         explosionProgress = 0; // The image the current explosion effect is on
         completed = false; // Whether the Label on top of Obstacle has been declared
         explode = false; // To determine if the Obstacle should explode
@@ -94,6 +108,8 @@ public class Obstacle2 extends Actor implements Obstacle
         return getY();
     }
 =======
+=======
+>>>>>>> Stashed changes
 public class Obstacle2 extends Meteor
 {
     String originalWord;
@@ -123,5 +139,8 @@ public class Obstacle2 extends Meteor
         super.explode();
     }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

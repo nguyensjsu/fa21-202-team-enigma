@@ -32,8 +32,11 @@ public class MyWorld extends World
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
 =======
+=======
+>>>>>>> Stashed changes
     private int reverseWordsFrequency = 4;
 
 >>>>>>> Stashed changes
@@ -45,8 +48,11 @@ public class MyWorld extends World
         // Order of Actors due to the need for certain Actors to be on top of others
         setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle1.class, Obstacle2.class);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         
 =======
+=======
+>>>>>>> Stashed changes
 
 >>>>>>> Stashed changes
         // Starting the music only once
@@ -206,6 +212,9 @@ public class MyWorld extends World
                     q.enqueue(new Obstacle1(minLetters, maxLetters));
             }
                 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
         return q;
