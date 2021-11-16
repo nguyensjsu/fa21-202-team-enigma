@@ -173,7 +173,7 @@ public class MyWorld extends World {
 
         while (q.size() < amount) {
             if (q.size() % 4 == 0 && !q.isEmpty())
-                q.enqueue(new BoosterMeteor(new Obstacle(minLetters, maxLetters)));
+                q.enqueue(new BoosterMeteor(minLetters, maxLetters));
             else
                 q.enqueue(new Obstacle(minLetters, maxLetters));
         }
