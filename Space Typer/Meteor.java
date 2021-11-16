@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Meteor extends Actor
+public class Meteor extends Actor implements IMeteor
 {
     private int explosionProgress;
     private boolean completed;

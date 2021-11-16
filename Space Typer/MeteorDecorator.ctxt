@@ -1,4 +1,14 @@
 #BlueJ class context
 comment0.target=MeteorDecorator
 comment0.text=\n\ Write\ a\ description\ of\ class\ MeteorDecorator\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-numComments=1
+comment1.params=min\ max
+comment1.target=MeteorDecorator(int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ removeLabel()
+comment4.params=
+comment4.target=java.lang.String\ getValue()
+comment5.params=
+comment5.target=void\ explode()
+numComments=6

@@ -24,8 +24,6 @@ public class MyWorld extends World {
     // Gameplay variables
 //    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
     private Queue<IMeteor> meteors = new Queue<>();
-    //private Queue<Obstacle> obstaclesList = new Queue<>();
-    //private Queue<BoosterMeteor> boosterMeteorsList = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
     private int numOfObstacles = 7; // The number of Obstacle queued for the next difficulty
     private int spawnTime = 3000; // Delay in Milliseconds between each Obstacle Spawn

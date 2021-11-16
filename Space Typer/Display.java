@@ -159,10 +159,6 @@ public class Display extends Actor
     // Method to check if any of the Obstacle matches the word typed
     public void checkWord(String input, Ship ship) {
         List<IMeteor> meteors = getWorld().getObjects(IMeteor.class); // A List of Obstacle in world currently
-        List<Obstacle> obstacles = getWorld().getObjects(Obstacle.class);
-        List<BoosterMeteor> boosterMeteors = getWorld().getObjects(BoosterMeteor.class);
-        meteors.addAll(obstacles);
-        meteors.addAll(boosterMeteors);
         MyWorld world = (MyWorld) getWorld();  // Get world reference
         
         for (IMeteor o : meteors) {
