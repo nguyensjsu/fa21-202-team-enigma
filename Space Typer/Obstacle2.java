@@ -10,10 +10,11 @@ import java.util.*;
 public class Obstacle2 extends Meteor
 {
     String originalWord;
+    
     public Obstacle2(int min, int max) {
         super(min, max);
-        originalWord = value;
-        value = new StringBuffer(originalWord).reverse().toString();
+        originalWord = super.getValue();
+        setValue(reverseWord(originalWord));
     }
 
     public void act()
@@ -35,5 +36,16 @@ public class Obstacle2 extends Meteor
     public void explode() {
         super.explode();
     }
-
+    
+    // Returns the Original word that should be returned for this Obstacle
+    public String getOriginalWord() {
+        return originalWord;
+    }
+    
+    public String reverseWord(String word){
+        if(word == null)
+            return "*****"; // Handles if there ever is an invalid word
+        String rWord = new StringBuffer(word).reverse().toString();
+        return rWord;
+    }
 }

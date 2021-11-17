@@ -8,12 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Meteor extends Actor implements IMeteor
 {
-    int explosionProgress;
-    boolean completed;
-    boolean explode;
-    String value;
-    GreenfootImage[] explosions;
-    SimpleTimer delay;
+    private int explosionProgress;
+    private boolean completed;
+    private boolean explode;
+    private String value;
+    private GreenfootImage[] explosions;
+    private SimpleTimer delay;
 
     public Meteor(int min, int max) {
         explosionProgress = 0; // The image the current explosion effect is on
@@ -76,6 +76,10 @@ public class Meteor extends Actor implements IMeteor
     // Returns the word that should be typed on this Obstacle
     public String getValue() {
         return value;
+    }
+    
+    public void setValue(String s) {
+        value = s;
     }
 
     // Initiate the explosion sequence
