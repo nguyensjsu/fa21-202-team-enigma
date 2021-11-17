@@ -11,14 +11,14 @@ public class Bullet extends Actor
 {
     private int currentImage = 0; // Integer to keep track which image is the Bullet
     private GreenfootImage[] bulletCycle = new GreenfootImage[4]; // Array that stores the Bullet's animations
-    private Meteor target; // The Obstacle that this Bullet can remove (Determined at Constructor)
-    private Meteor touched; // The Obstacle that this currently touching, if any
+    private IMeteor target; // The Obstacle that this Bullet can remove (Determined at Constructor)
+    private IMeteor touched; // The Obstacle that this currently touching, if any
     private GreenfootSound bulletfire = new GreenfootSound("bullet_fire.mp3");
     private GreenfootSound explode = new GreenfootSound("explode.mp3");
     private SimpleTimer delay = new SimpleTimer(); // Delay between the animation of Bullet
     
     // Constuctor (Gives each Bullet an Obstacle that it can clear) 
-    public Bullet(Meteor goal) {
+    public Bullet(IMeteor goal) {
         explode.setVolume(20);
         bulletfire.setVolume(25);
         bulletfire.play();
@@ -54,8 +54,8 @@ public class Bullet extends Actor
         /* Gets a reference of that Obstacle when it touches one. If the reference matches with the
          * target reference, it will remove itself along with the Obstacle
          */
-        if (isTouching(Meteor.class)) {
-            touched = getIntersectingObjects(Meteor.class).get(0);
+        if (isTouching(IMeteor.class)) {
+            touched = getIntersectingObjects(IMeteor.class).get(0);
             
             if (touched == target) {
                 explode.play();

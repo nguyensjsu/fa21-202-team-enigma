@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 import java.util.*;
+import java.util.Random;  
 
 /**
  * The world where the game is started in. It has many field variables that dictate how difficult the
@@ -23,9 +23,7 @@ public class MyWorld extends World {
 
     // Gameplay variables
 //    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
-    private Queue<Meteor> meteors = new Queue<>();
-    //private Queue<Obstacle> obstaclesList = new Queue<>();
-    //private Queue<BoosterMeteor> boosterMeteorsList = new Queue<>();
+    private Queue<IMeteor> meteors = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
     private int numOfObstacles = 7; // The number of Obstacle queued for the next difficulty
     private int spawnTime = 3000; // Delay in Milliseconds between each Obstacle Spawn
@@ -33,13 +31,14 @@ public class MyWorld extends World {
     private int maxLetters = 7; // The longest length a word can be
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
-
+    private int reverseWordFreq = 4;
+    
     // Constructor
     public MyWorld() {
         super(800, 500, 1);
 
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, Obstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class);
 
         // Starting the music only once
         if (!musicStarted) {
@@ -73,32 +72,32 @@ public class MyWorld extends World {
         if (delay.millisElapsed() > spawnTime && !meteors.isEmpty()) {
             if (difficulty < 5) {
                 // Randomly spawns Obstacle along a range on the Y-Axis
-                addObject(meteors.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
+                addObject((greenfoot.Actor)meteors.dequeue(), 800, Greenfoot.getRandomNumber(290) + 20);
             } else {
                 switch (pattern) {
                     // Spawns in a fixed pattern to prevent Obstacle stacking from high spawn rates
                     case 1:
-                        addObject(meteors.dequeue(), 800, 40);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 40);
                         pattern = 2;
                         break;
 
                     case 2:
-                        addObject(meteors.dequeue(), 800, 100);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 100);
                         pattern = 3;
                         break;
 
                     case 3:
-                        addObject(meteors.dequeue(), 800, 160);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 160);
                         pattern = 4;
                         break;
 
                     case 4:
-                        addObject(meteors.dequeue(), 800, 220);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 220);
                         pattern = 5;
                         break;
 
                     case 5:
-                        addObject(meteors.dequeue(), 800, 280);
+                        addObject((greenfoot.Actor)meteors.dequeue(), 800, 280);
                         pattern = 1;
                         break;
                 }
@@ -128,6 +127,7 @@ public class MyWorld extends World {
                     minLetters = 4;
                     maxLetters = 8;
                     this.setBackground(new GreenfootImage("background2.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 3:
@@ -136,6 +136,7 @@ public class MyWorld extends World {
                     minLetters = 5;
                     maxLetters = 9;
                     this.setBackground(new GreenfootImage("background3.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 4:
@@ -144,6 +145,7 @@ public class MyWorld extends World {
                     minLetters = 7;
                     maxLetters = 11;
                     this.setBackground(new GreenfootImage("background4.png"));
+                    reverseWordFreq--;
                     break;
 
                 case 5:
@@ -166,7 +168,7 @@ public class MyWorld extends World {
     }
 
     // Method to refill Queue with a specific amount of Obstacle
-    public Queue<Meteor> refreshQueue(Queue<Meteor> q, int amount) {
+    public Queue<IMeteor> refreshQueue(Queue<IMeteor> q, int amount) {
         while (!q.isEmpty()) {
             q.dequeue();
         }
@@ -174,8 +176,12 @@ public class MyWorld extends World {
         while (q.size() < amount) {
             if (q.size() % 4 == 0 && !q.isEmpty())
                 q.enqueue(new BoosterMeteor(minLetters, maxLetters));
-            else
-                q.enqueue(new Obstacle(minLetters, maxLetters));
+            else{
+                if(new Random().nextInt(reverseWordFreq) == 0)
+                    q.enqueue(new RedObstacle(minLetters, maxLetters));
+                else
+                    q.enqueue(new GreyObstacle(minLetters, maxLetters));
+            }   
         }
 
         return q;

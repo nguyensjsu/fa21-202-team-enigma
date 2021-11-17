@@ -1,4 +1,3 @@
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
@@ -158,10 +157,10 @@ public class Display extends Actor
     
     // Method to check if any of the Obstacle matches the word typed
     public void checkWord(String input, Ship ship) {
-        List<Meteor> meteors = getWorld().getObjects(Meteor.class); // A List of Obstacle in world currently
+        List<IMeteor> meteors = getWorld().getObjects(IMeteor.class); // A List of Obstacle in world currently
         MyWorld world = (MyWorld) getWorld();  // Get world reference
         
-        for (Meteor o : meteors) {
+        for (IMeteor o : meteors) {
             boolean isBoosterMeteor = false;
             // Bug Prevention - To make sure a word that has a Bullet aimed at it can not be typed again
             if (o.getValue().equals(input) && !forbiddenWord.equals(input)) {

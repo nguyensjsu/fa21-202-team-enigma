@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Meteor extends Actor
+public class Meteor extends Actor implements IMeteor
 {
     private int explosionProgress;
     private boolean completed;
@@ -76,6 +76,10 @@ public class Meteor extends Actor
     // Returns the word that should be typed on this Obstacle
     public String getValue() {
         return value;
+    }
+    
+    public void setValue(String s) {
+        value = s;
     }
 
     // Initiate the explosion sequence

@@ -1,17 +1,20 @@
-import java.util.HashMap;
-import greenfoot.*;
-/**
- * Write a description of class MeteorDecorator here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class MeteorDecorator extends Meteor {
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
-    public MeteorDecorator(int min, int max) {
+/**
+ * It will constantly move to the left until it hits the Shield or the Planet.
+ * 
+ * @author (Ricky) 
+ * @version (April 11, 2019)
+ */
+public class GreyObstacle extends Meteor
+{
+
+    public GreyObstacle(int min, int max) {
         super(min, max);
+
     }
-    //public abstract int multiplyScore(int score);
+
     public void act()
     {
         super.act();
@@ -31,4 +34,5 @@ public class MeteorDecorator extends Meteor {
     public void explode() {
         super.explode();
     }
+
 }
