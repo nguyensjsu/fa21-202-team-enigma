@@ -7,12 +7,14 @@ import java.util.*;
  * @author (Ricky) 
  * @version (April 11, 2019)
  */
-public class Obstacle1 extends Meteor
+public class RedObstacle extends Meteor
 {
-
-    public Obstacle1(int min, int max) {
+    String originalWord;
+    
+    public RedObstacle(int min, int max) {
         super(min, max);
-
+        originalWord = super.getValue();
+        setValue(reverseWord(originalWord));
     }
 
     public void act()
@@ -27,12 +29,23 @@ public class Obstacle1 extends Meteor
 
     // Returns the word that should be typed on this Obstacle
     public String getValue() {
-        return super.getValue();
+        return originalWord;
     }
 
     // Initiate the explosion sequence
     public void explode() {
         super.explode();
     }
-
+    
+    // Returns the Original word that should be returned for this Obstacle
+    public String getOriginalWord() {
+        return originalWord;
+    }
+    
+    public String reverseWord(String word){
+        if(word == null)
+            return "*****"; // Handles if there ever is an invalid word
+        String rWord = new StringBuffer(word).reverse().toString();
+        return rWord;
+    }
 }
