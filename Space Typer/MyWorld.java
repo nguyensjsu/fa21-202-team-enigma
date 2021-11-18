@@ -22,7 +22,7 @@ public class MyWorld extends World {
     private GreenfootSound difficultyUp = new GreenfootSound("difficulty_up.mp3");
 
     // Gameplay variables
-//    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
+    //private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
     private Queue<IMeteor> meteors = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
     private int numOfObstacles = 7; // The number of Obstacle queued for the next difficulty
@@ -35,8 +35,10 @@ public class MyWorld extends World {
     
     // Constructor
     public MyWorld() {
-        super(800, 500, 1);
-
+       
+     super(800, 500, 1);
+     prepare();
+        
         // Order of Actors due to the need for certain Actors to be on top of others
         setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class);
 
@@ -66,6 +68,17 @@ public class MyWorld extends World {
         // Fill the Queue with a specified amount of Obstacle
         meteors = refreshQueue(meteors, numOfObstacles);
     }
+    
+    //adding play and pause button functionality
+    private void prepare()
+    {
+        Pause pause = new Pause();
+        addObject(pause,270,435);
+        Play play = new Play();
+        addObject(play,550,434);
+        
+    }
+
 
     public void act() {
         // Spawning Obstacle based on a delay

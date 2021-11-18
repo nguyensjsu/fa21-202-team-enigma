@@ -16,17 +16,7 @@ public class Pause extends Actor
        myImage.scale(myNewWidth,myNewHeight);
        
    }
-    boolean gameon = true;
-    /**
-     * Act - do whatever the Pause wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
-
-//public class play() {
-        
- //   }
-
+   
 
 public void act()
     {
@@ -35,20 +25,15 @@ public void act()
           
         //  World world = getWorld();
          // Greenfoot.setWorld(new MyWorld());
-         if (gameon){
          
-         this.gameon = false;   
-         Greenfoot.stop();
+        Greenfoot.stop();
          
           
       }
-          else {
-          
-          this.gameon = true;
-          Greenfoot.start();
-          
-          
-      }
+         
     }
  }
-}
+ 
+ 
+
+
