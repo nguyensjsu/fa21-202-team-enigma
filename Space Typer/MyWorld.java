@@ -38,7 +38,7 @@ public class MyWorld extends World {
         super(800, 500, 1);
 
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class, BoosterMeteor.class);
 
         // Starting the music only once
         if (!musicStarted) {
