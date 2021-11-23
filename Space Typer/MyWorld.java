@@ -32,6 +32,7 @@ public class MyWorld extends World {
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
     private int reverseWordFreq = 4;
+    private boolean gameon = true;
     
     // Constructor
     public MyWorld() {
@@ -69,16 +70,15 @@ public class MyWorld extends World {
         meteors = refreshQueue(meteors, numOfObstacles);
     }
     
-    //adding play and pause button functionality
+    // ***adding play and pause button functionality****
     private void prepare()
     {
-        Pause pause = new Pause();
-        addObject(pause,270,435);
-        Play play = new Play();
-        addObject(play,550,434);
-        
+    
+        PlayPause playpause = new PlayPause();
+        addObject(playpause,245,434);
     }
 
+    
 
     public void act() {
         // Spawning Obstacle based on a delay
