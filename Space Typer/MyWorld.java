@@ -38,7 +38,7 @@ public class MyWorld extends World {
         super(800, 500, 1);
 
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class, BoosterMeteor.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class);
 
         // Starting the music only once
         if (!musicStarted) {
@@ -212,5 +212,11 @@ public class MyWorld extends World {
     public void updateLabel(LabelT text, int x, int y) {
         removeObjects(getObjectsAt(x, y, LabelT.class));
         addObject(text, x, y);
+    }
+    
+    // A function called to get the Dificulty level
+    public int getDifficulty()
+    {
+        return difficulty;
     }
 }
