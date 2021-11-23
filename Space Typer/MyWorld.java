@@ -75,7 +75,7 @@ public class MyWorld extends World {
     {
     
         PlayPause playpause = new PlayPause();
-        addObject(playpause,245,434);
+        addObject(playpause,10,10);
     }
 
     

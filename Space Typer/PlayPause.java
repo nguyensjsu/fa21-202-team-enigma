@@ -15,12 +15,6 @@ public class PlayPause extends Actor
 
 public PlayPause() {
        
-       myImage = getImage();
-       int myNewHeight =(int)myImage.getHeight()/13;
-       int myNewWidth = (int)myImage.getWidth()/13;
-       myImage.scale(myNewWidth,myNewHeight);
-       setLocation(270,455);
-       
        
        //command pattern implementation
 
@@ -34,56 +28,31 @@ public PlayPause() {
 
 public void act()
     {
-    // if(Greenfoot.isKeyDown("space")){
-        // if(gameon == false){
-            // gameon = true;
-            // Greenfoot.start(); 
-        // }
-        // else{
-            // gameon = false;
-            // Greenfoot.stop();
-        // }
     
-        if(Greenfoot.isKeyDown("P")){
+        if(Greenfoot.isKeyDown("1")){
             setImage(new GreenfootImage("pause.png"));
-            int myNewHeight =(int)myImage.getHeight()/15;
-            int myNewWidth = (int)myImage.getWidth()/15;
-            myImage.scale(myNewWidth,myNewHeight);
+            setLocation(270,455);
+           
+    
+           /* int myNewHeight =(int)myImage.getHeight()/10;
+            int myNewWidth = (int)myImage.getWidth()/10;
+            System.out.println(myNewHeight);
+            System.out.println(myNewWidth);
+            myImage.scale(myNewWidth,myNewHeight); */
+            
+             pausegame.execute();    
+             
+        setImage(new GreenfootImage("play.png"));
+        setLocation(270,455);
         while(!Greenfoot.isKeyDown("0")){
             Greenfoot.delay(1);
-        }
+        } 
+        
         
     }
-    else if(Greenfoot.isKeyDown("A")){
-            setImage(new GreenfootImage("play.png"));
-            int myNewHeight =(int)myImage.getHeight()/18;
-            int myNewWidth = (int)myImage.getWidth()/18;
-            myImage.scale(myNewWidth,myNewHeight);
-        }
     
     
-      /* if (Greenfoot.mousePressed(this)) {
-          
-        // // if (gameon){
-            // gameon = !gameon;
-            // // gameon = false; 
-            
-            // // while (!gameon){
-                // // Greenfoot.delay(1);
-                
-                
-            // // }
-
-               
-            
-          // }
-       
-     
-        // else  {
-          // gameon = true;  
-        }
-            
-       } */
+    
          
     }
   }

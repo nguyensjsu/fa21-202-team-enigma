@@ -8,11 +8,17 @@ import greenfoot.*;
  */
 public class PauseReceiver implements IReceiver
 {
-   
+     GreenfootImage myImage ;
+
      public void doAction(){
          
-         Greenfoot.stop();
+       
+            
+        while(!Greenfoot.isKeyDown("0")){
+            Greenfoot.delay(1);
+        }
          
-     }
+         
+        }
   
 }
