@@ -30,7 +30,7 @@ public void act()
             pausegame.execute();    
              
         setImage(new GreenfootImage("pause.png"));
-        setLocation(260,455);
+        setLocation(270,455);
         while(!Greenfoot.isKeyDown("0")){
             Greenfoot.delay(1);
         } 
