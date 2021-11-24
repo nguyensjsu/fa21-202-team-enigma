@@ -75,6 +75,7 @@ public class Display extends Actor
     public void act() 
     {
         MyWorld world = (MyWorld) getWorld();
+        boolean isMask ;
         
         // One-time label creation
         if (!labelCreated) {
@@ -84,8 +85,22 @@ public class Display extends Actor
         }
         
         // Code to constantly update/display the newly typed word
-        LabelT display = new LabelT(word, 50);
+        /*LabelT display = new LabelT(word, 50);
         world.updateLabel(display, 400, 410);
+        */
+        
+        if(world.getDifficulty() == 4)
+        {
+            isMask = true ;
+        }
+        else
+        {
+            isMask = false ;
+        }
+        TypeFactory typeFactory = new TypeFactory();
+        ModeType type = typeFactory.getType(isMask);
+        type.update(word, world);
+
         
         // Get current user's keystroke
         currentChar = Greenfoot.getKey();
