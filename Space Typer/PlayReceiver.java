@@ -8,26 +8,9 @@ import greenfoot.*;
  */
 public class PlayReceiver implements IReceiver
 {
-   
-     public void doAction(){
+   public void doAction(){
          
-         Greenfoot.start();
-         
-         
-     }
-     
-    /* public void playWorld(){
-       
-         if (Greenfoot.mouseClicked(this)) 
-        {
-           World world;
-           world = World() ;
-           //Greenfoot.setWorld(new Pau(World()));
-           Greenfoot.setWorld(playWorld());
-        }
-        
-        } */
+         Greenfoot.start(); 
+   }  
     
-     
-  
 }

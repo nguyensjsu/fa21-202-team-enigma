@@ -12,9 +12,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class ConcreteCommand implements ICmnd
 {
-   
-  
-  private IReceiver theReceiver;
+   private IReceiver theReceiver;
   
   public void execute(){
       
@@ -28,9 +26,5 @@ public class ConcreteCommand implements ICmnd
   public void palyWorld () {
       
   }
-  
-  
-  
-  
   
 }

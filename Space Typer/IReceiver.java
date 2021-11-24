@@ -6,9 +6,6 @@
  */
 public interface IReceiver  
 {
-
-    void doAction(); 
-    
-
-    
+   void doAction(); 
+        
 }

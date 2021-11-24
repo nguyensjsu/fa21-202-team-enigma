@@ -31,6 +31,6 @@ public class StartScreen extends World
      */
     private void prepare()
     {
-        
+
     }
 }

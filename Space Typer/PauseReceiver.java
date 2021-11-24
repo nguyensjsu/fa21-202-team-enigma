@@ -12,13 +12,11 @@ public class PauseReceiver implements IReceiver
 
      public void doAction(){
          
-       
-            
-        while(!Greenfoot.isKeyDown("0")){
+         while(!Greenfoot.isKeyDown("0")){
             Greenfoot.delay(1);
         }
          
-         
-        }
+        
+   }
   
 }
