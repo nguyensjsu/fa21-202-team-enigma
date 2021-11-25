@@ -214,4 +214,11 @@ public class MyWorld extends World {
         addObject(text, x, y);
     }
     
+
+    // A function called to get the Dificulty level
+    public int getDifficulty()
+    {
+        return difficulty;
+    }
+
 }
