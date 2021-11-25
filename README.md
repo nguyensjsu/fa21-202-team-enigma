@@ -17,5 +17,7 @@ Arpitha Srinivas
 ### Shreyas Kulkarni
 ### Brinda Pujara
 ### Sagar Bharatkumar Raval
+- Added a feature of masked words when player reaches at difficulty level 4. During that level, when a player enter alphabets they will be displayed as asterisks e.g. if a player has entered alphabet "action" then it will be displayed as "******" on screen. 
+- Used factory pattern to implement this feature. Created two claases **Masked** and **Unmasked** to handle it and class TypeFactory and interface ModeType to apply the design pattern and functionality. Class **Typefactory** desides which type to be implemented whether Masked or Unmasked based on a boolean variable. Masked and Unmasked implemets **ModeType** interface.
 ### Sai Swarup Rath
 ### Arpitha Srinivas
