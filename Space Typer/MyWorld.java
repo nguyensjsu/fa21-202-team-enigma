@@ -226,4 +226,12 @@ public class MyWorld extends World {
         removeObjects(getObjectsAt(x, y, LabelT.class));
         addObject(text, x, y);
     }
+    
+
+    // A function called to get the Dificulty level
+    public int getDifficulty()
+    {
+        return difficulty;
+    }
+
 }
