@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AllScores extends World
+public class AllScores extends World implements IScoreTable
 {
      private Scanner scorer = new Reader().getScanner("scores.txt"); // Scanner to read file
      public static ArrayList<Integer> topScores = new ArrayList<Integer>();
@@ -18,7 +18,7 @@ public class AllScores extends World
     {    
        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 700, 1); 
+        super(900, 600, 1); 
         String s = ScoreDisplay();
         Label label = new Label(s,40);
         addObject(label, 400, 250);

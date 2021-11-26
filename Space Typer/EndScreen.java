@@ -17,13 +17,13 @@ public class EndScreen extends World
     public EndScreen(int score)
     {    
         super(800, 500, 1);  
-        setPaintOrder(Again.class,TopPlayers.class,Flashlight.class);
-        Flashlight flashlight = new Flashlight();
-        addObject(flashlight, 400, 250);
-        Again button = new Again();
-        addObject(button, 400, 450);
+        setPaintOrder(TopPlayers.class,Again.class);
+        //Flashlight flashlight = new Flashlight();
+        //addObject(flashlight, 400, 250);
         TopPlayers button1 = new TopPlayers();
         addObject(button1, 400, 350);
+        Again button = new Again();
+        addObject(button, 400, 450);
         Label label = new Label("Final Score", 40);
         addObject(label, 400, 250);
         Label label2 = new Label(score, 50);
