@@ -9,23 +9,13 @@ import java.util.List;  // (World, Actor, GreenfootImage, Greenfoot and MouseInf
  */ 
 public class Again extends Actor
 {
-    boolean mouseOver = false; // To determine if mouse is hovering over the button
+    boolean mouseOver = true; // To determine if mouse is hovering over the button
  
     public void act()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();  
-         
-        if (!mouseOver && Greenfoot.mouseMoved(this))  
-        {  
-            setImage("playagain.png");  
-            mouseOver = true;  
-        }  
-        
-        if (mouseOver && Greenfoot.mouseMoved(null) && ! Greenfoot.mouseMoved(this))  
-        {  
-            setImage("playagain2.png");  
-            mouseOver = false;  
-        } 
+        setImage("playagain.png");  
+       
  
         if (Greenfoot.mouseClicked(this))  
         {  
@@ -33,4 +23,3 @@ public class Again extends Actor
         }   
     }   
 } 
-
