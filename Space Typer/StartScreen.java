@@ -12,7 +12,6 @@ public class StartScreen extends World
     public StartScreen()
     {    
         super(800, 500, 1); 
-        prepare();
     }
 
     public void act(){
@@ -23,14 +22,5 @@ public class StartScreen extends World
         if (Greenfoot.isKeyDown("I")) {
             Greenfoot.setWorld(new Instructions());          
         }
-    }
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-
     }
 }

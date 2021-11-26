@@ -22,7 +22,7 @@ public class MyWorld extends World {
     private GreenfootSound difficultyUp = new GreenfootSound("difficulty_up.mp3");
 
     // Gameplay variables
-    //private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
+//    private Queue<Obstacle> obstacles = new Queue<Obstacle>(); // Queue to store/dequeue Obstacle
     private Queue<IMeteor> meteors = new Queue<>();
     private int difficulty = 1; // Difficulty of the game, affects the following fields
     private int numOfObstacles = 7; // The number of Obstacle queued for the next difficulty
@@ -32,16 +32,13 @@ public class MyWorld extends World {
     private int pattern = 1; // (Only for max difficulty) A Pattern it will spawn for Obstacle
     private boolean flashlight = false; // Is flashlight is enabled (highest difficulty)
     private int reverseWordFreq = 4;
-    private boolean gameon = true;
     
     // Constructor
     public MyWorld() {
-       
-     super(800, 500, 1);
-     prepare();
-        
+        super(800, 500, 1);
+
         // Order of Actors due to the need for certain Actors to be on top of others
-        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class);
+        setPaintOrder(LabelT.class, Bullet.class, Ship.class, Shield.class, Planet.class, Flashlight.class, Label.class, GreyObstacle.class, RedObstacle.class, BoosterMeteor.class);
 
         // Starting the music only once
         if (!musicStarted) {
@@ -69,16 +66,6 @@ public class MyWorld extends World {
         // Fill the Queue with a specified amount of Obstacle
         meteors = refreshQueue(meteors, numOfObstacles);
     }
-    
-    // ***adding play and pause button functionality****
-    private void prepare()
-    {
-    
-        PlayPause playpause = new PlayPause();
-        addObject(playpause,270,450);
-    }
-
-    
 
     public void act() {
         // Spawning Obstacle based on a delay
@@ -227,11 +214,9 @@ public class MyWorld extends World {
         addObject(text, x, y);
     }
     
-
     // A function called to get the Dificulty level
     public int getDifficulty()
     {
         return difficulty;
     }
-
 }
