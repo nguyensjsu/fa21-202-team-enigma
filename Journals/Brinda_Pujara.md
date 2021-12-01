@@ -1,4 +1,4 @@
-The key to learning is feedback. It is nearly impossible to learn anything without it. - Steven D. Levitt
+"The key to learning is feedback. It is nearly impossible to learn anything without it." - Steven D. Levitt
 
 # Week 1
 
@@ -24,3 +24,6 @@ Also, I reviewed the Pull Request of Shreyas and provided him feedback to give m
 
 # Week 4
 
+I reviewed the Pull Request of Sagar and Arpitha, provided the feedback on the changes required and then merged their Pull Requests. Sagar had put wrong commits on the main branch so, I fixed it with hard resetting the branch and in the meantime Sai had pulled the code from main so I helped him fix his branch as well. So, I spent a lot of time this week in maintaining the git hub repository and acting as an Github administrator as the teammates were new to Git. But, Arpitha merged the old main branch to her branch and merged it back to main which made all my efforts to fix the branch in vein. I had a backup of a stable main branch so I pushed that and everyone added their changes and we force pushed that branch to main. I performed QA each time the Pull Request was created to make sure that the integrated changes are working fine. 
+
+Apart from the Github, I was working on the documentation i.e. creating Demo Video and UML diagrams.
