@@ -11,6 +11,7 @@ public class PlayReceiver implements IReceiver
    public void doAction(){
          
          Greenfoot.start(); 
+         //Greenfoot.delay(1);
    }  
     
 }
