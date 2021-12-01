@@ -13,6 +13,17 @@ Arpitha Srinivas
 - We've used the existing code provided here: https://github.com/Ricky77768/ComputerScienceGames
 - You can find information about permission and copyright in **LICENSE** folder included in given link. This game is open source and we decided to expand the original code.
 
+## UI for Game
+
+## Important Links
+- Video Ad:
+- Video Demo:
+- Shreyas's Journal Link:
+- Brinda's Journal Link:
+- Sai's Journal Link:
+- Sagar's Journal Link:
+- Arpitha's Journal Link:
+
 ## Design Implementation Summary
 ### Shreyas Kulkarni
 - This feature adds a little twist to the game - Red Meteor. This Red Meteor displays the word that needs to be entered in reverse order. So the gamer needs to quickly interpret and type the reverse.
