@@ -35,6 +35,9 @@ Arpitha Srinivas
 - Sagar's Journal Link:
 - Arpitha's Journal Link:
 
+## Architecture and Model Diagrams
+### Class Diagram
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Team%20Enigma%20Class%20Diagram.png)
 ## Design Implementation Summary
 ### Shreyas Kulkarni
 - This feature adds a little twist to the game - Red Meteor. This Red Meteor displays the word that needs to be entered in reverse order. So the gamer needs to quickly interpret and type the reverse.
