@@ -3,11 +3,11 @@
 - The team decided to work on Game built on Greenfoot using Java.
 
 ## Team members
-Shreyas Kulkarni<br>
-Brinda Pujara<br>
-Sagar Bharatkumar Raval<br>
-Sai Swarup Rath<br>
-Arpitha Srinivas
+[Shreyas Kulkarni](https://github.com/Shreyaskulkarni98)<br>
+[Brinda Pujara](https://github.com/brindap1210)<br>
+[Sagar Bharatkumar Raval](https://github.com/SagarBharatkumarRaval)<br>
+[Sai Swarup Rath](https://github.com/saiswaruprath)<br>
+[Arpitha Srinivas](https://github.com/ArpithaSrinivas5)
 
 ## Source code
 - We've used the existing code provided here: https://github.com/Ricky77768/ComputerScienceGames
@@ -28,12 +28,12 @@ Arpitha Srinivas
 
 ## Important Links
 - Video Ad:
-- Video Demo:
-- Shreyas's Journal Link:
-- Brinda's Journal Link:
-- Sai's Journal Link:
-- Sagar's Journal Link:
-- Arpitha's Journal Link:
+- Video Demo: https://www.youtube.com/watch?v=y8WwPmztA5U
+- [Shreyas's Journal](Journals/Shreyas_Kulkarni.md)
+- [Brinda's Journal](Journals/Brinda_Pujara.md)
+- [Sai's Journal](Journals/Sai_Swarup_Rath.md)
+- [Sagar's Journal](Journals/Sagar_Raval.md)
+- [Arpitha's Journal](Journals/Arpitha_Srinivas.md)
 
 ## Architecture and Model Diagrams
 ### Class Diagram
