@@ -13,16 +13,16 @@ Arpitha Srinivas
 - We've used the existing code provided here: https://github.com/Ricky77768/ComputerScienceGames
 - You can find information about permission and copyright in **LICENSE** folder included in given link. This game is open source and we decided to expand the original code.
 
-## UI for Game
+## UI for Game<br>
 ### How To Play
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
-
+<br><br>
 ### Game UI
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Start%20Screen.png)
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Game%20Screen.png)
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Masked%20Words.png)
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Game%20Over.png)
-
+<br><br>
 ### Scoreboard
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Scoreboard.png)
 
