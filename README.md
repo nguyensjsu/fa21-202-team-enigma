@@ -24,7 +24,7 @@ Arpitha Srinivas
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Game%20Over.png)
 
 ### Scoreboard
-![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Scoreboard.png)
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Scoreboard.png)
 
 ## Important Links
 - Video Ad:
