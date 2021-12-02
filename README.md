@@ -14,7 +14,15 @@ Arpitha Srinivas
 - You can find information about permission and copyright in **LICENSE** folder included in given link. This game is open source and we decided to expand the original code.
 
 ## UI for Game
+### How To Play
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
 
+### Game UI
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20%20Instructions.png)
 ## Important Links
 - Video Ad:
 - Video Demo:
