@@ -36,6 +36,8 @@
 - [Arpitha's Journal](Journals/Arpitha_Srinivas.md)
 
 ## Architecture and Model Diagrams
+### Architecture Diagram
+![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Architecture%20diagram.png)
 ### Class Diagram
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Team%20Enigma%20Class%20Diagram.png)
 
