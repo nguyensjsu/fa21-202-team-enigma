@@ -40,6 +40,8 @@
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Architecture%20diagram.png)
 ### Class Diagram
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Team%20Enigma%20Class%20Diagram.png)
+### Deployment Diagram
+![ALT Text](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Deployment%20Diagram.png)
 
 ## [Burndown Chart](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Reports/Team%20Enigma%20-%20Sprint%20Task%20Sheet.xlsx)
 <img width="920" alt="BurnDownChart" src="https://user-images.githubusercontent.com/89321718/144522198-87b5e596-e644-40de-8b32-4ab7ef677c5d.png">
