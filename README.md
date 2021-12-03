@@ -27,8 +27,8 @@
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Screenshots/Team%20Enigma%20-%20Scoreboard.png)
 
 ## Important Links
-- Video Ad:
-- Video Demo: https://www.youtube.com/watch?v=y8WwPmztA5U
+- [Video Ad](https://youtu.be/F3dqQNHN8MQ)
+- [Video Demo](https://www.youtube.com/watch?v=y8WwPmztA5U)
 - [Shreyas's Journal](Journals/Shreyas_Kulkarni.md)
 - [Brinda's Journal](Journals/Brinda_Pujara.md)
 - [Sai's Journal](Journals/Sai_Swarup_Rath.md)
