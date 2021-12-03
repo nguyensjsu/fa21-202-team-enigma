@@ -38,6 +38,10 @@
 ## Architecture and Model Diagrams
 ### Class Diagram
 ![ALT TEXT](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Architecture%20and%20Models/Team%20Enigma%20Class%20Diagram.png)
+
+## [Burndown Chart](https://github.com/nguyensjsu/fa21-202-team-enigma/blob/brinda/latest-backup-11282021/Reports/Team%20Enigma%20-%20Sprint%20Task%20Sheet.xlsx)
+<img width="920" alt="BurnDownChart" src="https://user-images.githubusercontent.com/89321718/144522198-87b5e596-e644-40de-8b32-4ab7ef677c5d.png">
+
 ## Design Implementation Summary
 ### Shreyas Kulkarni
 - This feature adds a little twist to the game - Red Meteor. This Red Meteor displays the word that needs to be entered in reverse order. So the gamer needs to quickly interpret and type the reverse.
