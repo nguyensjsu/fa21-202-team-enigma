@@ -7,7 +7,13 @@ Kent Beck in his book explains- "Whenever you have a problem, think about how it
 ## WEEK 1
 Weekly meeting was conducted at the start of the week and everyone being an equal part of the team communicated their ideas enthusiastically. All team members first researched on various games and projects which can be chosen to be developed using greenfoot and design patterns using java. After a proper discussion it was decided in our regular meeting that we will be working on Space Typer game and adding various functionalities in it. We all liked a game in Javascript. But after getting the feedback, it was decided that Javascript is not the best choice right now for design patterns implementation. Therefore, we moved forward with a game developed in Greenfoot(Space Typer). 
 
-Post the discussion, we created tasks and divided these tasks among ourselves. There were also daily face-to-face meetings for 15-20 minutes and communication on completed work and problems if any, so that others can help. I strongly feel these steps set the tone on proper implementation of the targets set for our project moving forward.
+Post the discussion, we created tasks and divided these tasks among ourselves. There were also daily face-to-face meetings for 15-20 minutes and communication on completed work and problems if any, so that others can help. I strongly feel these steps set the tone on proper implementation of the targets set for our project moving forward. The major focus of these meetings were 3 questions:
+
+### What did you do yesterday?
+
+### What will you do today?
+
+### Are there any impediments on your way?
 
 
 
