@@ -28,7 +28,7 @@
 
 ## Important Links
 - [Video Ad](https://youtu.be/F3dqQNHN8MQ)
-- [Video Demo](https://www.youtube.com/watch?v=y8WwPmztA5U)
+- [Video Demo](https://youtu.be/fAiq-afQVSU)
 - [Shreyas's Journal](Journals/Shreyas_Kulkarni.md)
 - [Brinda's Journal](Journals/Brinda_Pujara.md)
 - [Sai's Journal](Journals/Sai_Swarup_Rath.md)
