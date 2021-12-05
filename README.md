@@ -25,3 +25,14 @@ Arpitha Srinivas
 - Added a feature of displaying a scoreboard with top ten scores scored in the game which comes as an option when the game is over. When a player decides to check out the scoreboard, they just need to click on the scoreboard button and the top 10 scores in the game is displayed and the user can check if his score made it there.
 -  Used singleton design pattern for the implementation of this feature. Created a single class which tracks the score which gets incremented gradually as the game progresses and is stored in scoreboard object. When the time comes to display the scoreboard, we simply access this object and compare and display the final top ten scores that are stored for the game.
 ### Arpitha Srinivas
+-Implemented a play/pause button to play and pause the game at all levels. This feature is displayed once the user starts the game.
+-This feature is implemented using the behavioral pattern- "command pattern". The button receives commands based on the key pressed by user during the game (keypress 1 for pause and 0 for play) and executes the doaction(). 
+
+The Code for this feature can found in this branch: https://github.com/nguyensjsu/fa21-202-team-enigma/tree/feature-pause-update
+
+Please find the below screenshots of the feature :
+<img width="798" alt="pause" src="https://user-images.githubusercontent.com/89316938/144730356-12642d18-080a-4ec8-a35c-9c453962cf72.png">
+
+<img width="800" alt="Greenfoot: Space Typer1" src="https://user-images.githubusercontent.com/89316938/144735802-0ee47baf-245c-4a7f-8aba-fca4f047d088.png">
+
+<img width="799" alt="play" src="https://user-images.githubusercontent.com/89316938/144735805-753cac43-89ad-4d11-8306-dc41f9f8219f.png">
